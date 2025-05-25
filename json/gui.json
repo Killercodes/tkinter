@@ -1,0 +1,24 @@
+{
+    "title": "Extended Tkinter App",
+    "geometry": "500x200",
+    "widgets": [
+        {"type": "Label", "param": {"text": "Name:", "bg": "#FFF"}, "layout": {"row": 0, "column": 0,"padx":0,"pady":0,"sticky":"w"}},
+        {"type": "Entry", "param": {"width": 30}, "name": "name_field", "layout": {"row": 0, "column": 1}},
+        
+        {"type": "Label", "param": {"text": "Gender:"}, "layout": {"row": 1, "column": 0,"sticky":"w" }},
+        {"type": "Radiobutton", "param": {"text": "Male", "value": "Male"}, "group": "gender", "layout": {"row": 1, "column": 1,"sticky":"w" }},
+        {"type": "Radiobutton", "param": {"text": "Female", "value": "Female"}, "group": "gender", "layout": {"row": 1, "column": 2}},
+
+        {"type": "Label", "param": {"text": "Skills:"}, "layout": {"row": 2, "column": 0,"sticky":"w"}},
+        {"type": "Checkbutton", "param": {"text": "Python"}, "name": "skill_python", "layout": {"row": 2, "column": 1}},
+        {"type": "Checkbutton", "param": {"text": "JavaScript"}, "name": "skill_js", "layout": {"row": 2, "column": 2}},
+        
+        {"type": "Label", "param": {"text": "Experience (Years):"}, "layout": {"row": 3, "column": 0,"padx":0,"pady":0}},
+        {"type": "Spinbox", "param": {"from_": 0, "to": 50, "width": 5}, "name": "exp_years", "layout": {"row": 3, "column": 1}},
+
+        {"type": "Label", "param": {"text": "Choose Country:"}, "layout": {"row": 4, "column": 0}},
+        {"type": "Combobox", "param": {"values": ["USA", "India", "Germany", "Japan"], "width": 15}, "name": "country", "layout": {"row": 4, "column": 1,"sticky":"w"}},
+
+        {"type": "Button", "param": {"text": "Submit", "fg": "white", "bg": "blue"}, "command": "submit_action", "layout": {"row": 5, "column": 4, "columnspan": 2,"sticky":"e"}}
+    ]
+}
