@@ -1,0 +1,46 @@
+title: Tkinter App with Labeled Frames
+geometry: 500x400
+frames:
+  - name: personal_info
+    param: {text: "Personal Information", padx: 10, pady: 10}
+    layout: {row: 0, column: 0, columnspan: 2}
+    widgets:
+      - type: Label
+        param: {text: "Name:", bg: "#FFF"}
+        layout: {row: 0, column: 0}
+
+      - type: Entry
+        param: {width: 30}
+        name: name_field
+        layout: {row: 0, column: 1}
+
+      - type: Label
+        param: {text: "Email:"}
+        layout: {row: 1, column: 0}
+
+      - type: Entry
+        param: {width: 30}
+        name: email_field
+        layout: {row: 1, column: 1}
+
+  - name: experience_info
+    param: {text: "Experience Details", padx: 10, pady: 10}
+    layout: {row: 1, column: 0, columnspan: 2}
+    widgets:
+      - type: Label
+        param: {text: "Years of Experience:"}
+        layout: {row: 0, column: 0}
+
+      - type: Spinbox
+        param: {from_: 0, to: 50, width: 5}
+        name: exp_years
+        layout: {row: 0, column: 1}
+
+  - name: submission
+    param: {text: "Submit Section", padx: 10, pady: 10}
+    layout: {row: 2, column: 0, columnspan: 2}
+    widgets:
+      - type: Button
+        param: {text: "Submit", fg: "white", bg: "blue"}
+        command: submit_action
+        layout: {row: 0, column: 0, columnspan: 2}
